@@ -36,75 +36,46 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
-        /* Hide scrollbar for the carousel but keep functionality */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        /* Dynamic Background Animation */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         @keyframes drift {
-            0% { 
-                transform: translateY(110vh) rotate(0deg); 
-                opacity: 0; 
-            }
-            10% { 
-                opacity: 0.25; 
-            }
-            90% { 
-                opacity: 0.25; 
-            }
-            100% { 
-                transform: translateY(-20vh) rotate(360deg); 
-                opacity: 0; 
-            }
+            0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.25; }
+            90% { opacity: 0.25; }
+            100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
         }
-        .floating-logo {
-            position: absolute;
-            top: 0;
-            opacity: 0;
-            pointer-events: none;
-            animation: drift linear infinite;
-        }
+        .floating-logo { position: absolute; top: 0; opacity: 0; pointer-events: none; animation: drift linear infinite; }
     </style>
 </head>
 <body class="antialiased selection:bg-ash selection:text-gunmetal">
 
     <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-        <img src="https://api.iconify.design/simple-icons/adobepremierepro.svg?color=%239FB8AD" class="floating-logo w-14 h-14" style="left: 5%; animation-duration: 40s; animation-delay: -5s;">
-        <img src="https://api.iconify.design/simple-icons/capcut.svg?color=%239FB8AD" class="floating-logo w-20 h-20" style="left: 20%; animation-duration: 48s; animation-delay: -15s;">
+        <img src="https://api.iconify.design/simple-icons/adobepremierepro.svg?color=%239FB8AD" class="floating-logo w-14 h-14 hidden md:block" style="left: 5%; animation-duration: 40s; animation-delay: -5s;">
+        <img src="https://api.iconify.design/simple-icons/capcut.svg?color=%239FB8AD" class="floating-logo w-16 md:w-20 h-16 md:h-20" style="left: 20%; animation-duration: 48s; animation-delay: -15s;">
         <img src="https://api.iconify.design/simple-icons/tiktok.svg?color=%239FB8AD" class="floating-logo w-12 h-12" style="left: 35%; animation-duration: 35s; animation-delay: -25s;">
         <img src="https://api.iconify.design/simple-icons/adobeaftereffects.svg?color=%239FB8AD" class="floating-logo w-16 h-16" style="left: 50%; animation-duration: 50s; animation-delay: -10s;">
-        <img src="https://api.iconify.design/simple-icons/youtube.svg?color=%239FB8AD" class="floating-logo w-24 h-24" style="left: 65%; animation-duration: 55s; animation-delay: -35s;">
-        <img src="https://api.iconify.design/simple-icons/instagram.svg?color=%239FB8AD" class="floating-logo w-12 h-12" style="left: 80%; animation-duration: 38s; animation-delay: -20s;">
+        <img src="https://api.iconify.design/simple-icons/youtube.svg?color=%239FB8AD" class="floating-logo w-20 md:w-24 h-20 md:h-24" style="left: 65%; animation-duration: 55s; animation-delay: -35s;">
+        <img src="https://api.iconify.design/simple-icons/instagram.svg?color=%239FB8AD" class="floating-logo w-12 h-12 hidden sm:block" style="left: 80%; animation-duration: 38s; animation-delay: -20s;">
         <img src="https://api.iconify.design/simple-icons/openai.svg?color=%239FB8AD" class="floating-logo w-16 h-16" style="left: 90%; animation-duration: 45s; animation-delay: -40s;">
         
         <img src="https://api.iconify.design/simple-icons/meta.svg?color=%239FB8AD" class="floating-logo w-14 h-14" style="left: 15%; animation-duration: 42s; animation-delay: -30s;">
-        <img src="https://api.iconify.design/simple-icons/adobephotoshop.svg?color=%239FB8AD" class="floating-logo w-12 h-12" style="left: 45%; animation-duration: 36s; animation-delay: -2s;">
+        <img src="https://api.iconify.design/simple-icons/adobephotoshop.svg?color=%239FB8AD" class="floating-logo w-12 h-12 hidden md:block" style="left: 45%; animation-duration: 36s; animation-delay: -2s;">
         <img src="https://api.iconify.design/simple-icons/figma.svg?color=%239FB8AD" class="floating-logo w-16 h-16" style="left: 75%; animation-duration: 46s; animation-delay: -50s;">
-        
-        <img src="https://api.iconify.design/simple-icons/tiktok.svg?color=%239FB8AD" class="floating-logo w-10 h-10" style="left: 28%; animation-duration: 39s; animation-delay: -45s;">
-        <img src="https://api.iconify.design/simple-icons/capcut.svg?color=%239FB8AD" class="floating-logo w-14 h-14" style="left: 85%; animation-duration: 52s; animation-delay: -18s;">
-        <img src="https://api.iconify.design/simple-icons/adobepremierepro.svg?color=%239FB8AD" class="floating-logo w-10 h-10" style="left: 55%; animation-duration: 33s; animation-delay: -28s;">
         <img src="https://api.iconify.design/simple-icons/facebook.svg?color=%239FB8AD" class="floating-logo w-14 h-14" style="left: 10%; animation-duration: 44s; animation-delay: -48s;">
     </div>
 
     <header class="border-b border-dust backdrop-blur-md sticky top-0 z-50 bg-alabaster/90">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <span class="font-bold text-xl tracking-tight text-granite">CAPT<span class="text-gunmetal">IVATE</span></span>
-            <nav class="space-x-6 text-sm font-semibold text-gunmetal/80">
-                <a href="#work" class="hover:text-granite transition">Work</a>
-                <a href="#capabilities" class="hover:text-granite transition">Capabilities</a>
+        <div class="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+            <span class="font-bold text-lg md:text-xl tracking-tight text-granite">CAPT<span class="text-gunmetal">IVATE</span></span>
+            <nav class="flex items-center gap-3 md:space-x-6 text-xs md:text-sm font-semibold text-gunmetal/80">
+                <a href="#work" class="hover:text-granite transition hidden sm:inline-block">Work</a>
+                <a href="#contact" class="hover:text-granite transition hidden sm:inline-block">Contact</a>
                 <a href="#contact" class="px-4 py-2 bg-granite hover:bg-gunmetal text-alabaster rounded-full transition shadow-sm">Let's Work</a>
             </nav>
         </div>
     </header>
 
-    <section class="max-w-4xl mx-auto px-6 pt-24 pb-16 text-center">
+    <section class="max-w-4xl mx-auto px-6 pt-16 md:pt-24 pb-12 md:pb-16 text-center">
         <div class="inline-flex items-center gap-2 px-3 py-1 bg-dust/50 border border-dust rounded-full text-xs font-semibold text-granite mb-6">
             <span class="w-2 h-2 rounded-full bg-ash animate-pulse"></span>
             Editor Lead & AI Production Strategist
@@ -112,51 +83,51 @@
         <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight text-gunmetal">
             High-Retention Video Editing Fueled by <span class="gradient-text">Artificial Intelligence</span>
         </h1>
-        <p class="text-granite text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p class="text-granite text-base md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
             Stopping the scroll and scaling engagement for D2C brands. I combine advanced post-production frameworks with cutting-edge AI pipelines to engineer content that converts on Facebook and TikTok.
         </p>
-        <div class="flex justify-center gap-4">
-            <a href="#work" class="px-6 py-3 bg-granite text-alabaster hover:bg-gunmetal font-bold rounded-lg transition shadow-lg">
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#work" class="px-6 py-3 w-full sm:w-auto bg-granite text-alabaster hover:bg-gunmetal font-bold rounded-lg transition shadow-lg">
                 View Showcase
             </a>
-            <a href="#contact" class="px-6 py-3 bg-transparent border-2 border-granite text-granite hover:bg-granite hover:text-alabaster font-bold rounded-lg transition">
+            <a href="#contact" class="px-6 py-3 w-full sm:w-auto bg-transparent border-2 border-granite text-granite hover:bg-granite hover:text-alabaster font-bold rounded-lg transition">
                 Get in Touch
             </a>
         </div>
     </section>
 
-    <section id="work" class="max-w-6xl mx-auto px-6 py-16">
-        <div class="text-center md:text-left mb-12">
+    <section id="work" class="max-w-6xl mx-auto px-4 md:px-6 py-12 md:py-16">
+        <div class="text-center md:text-left mb-10 md:mb-12">
             <h2 class="text-3xl font-extrabold tracking-tight text-gunmetal mb-2">Featured Showcase</h2>
-            <p class="text-granite max-w-xl">A curated selection of production styles, framework implementations, and creative assets.</p>
+            <p class="text-granite max-w-xl mx-auto md:mx-0">A curated selection of production styles, framework implementations, and creative assets.</p>
         </div>
         
         <div class="grid md:grid-cols-2 gap-8">
             
-            <div class="p-5 bg-alabaster/95 backdrop-blur-sm border-2 border-dust rounded-2xl shadow-sm transition flex flex-col justify-between relative z-10">
+            <div class="p-4 md:p-5 bg-alabaster/95 backdrop-blur-sm border-2 border-dust rounded-2xl shadow-sm transition flex flex-col justify-between relative z-10">
                 <div class="w-full relative">
                     <div class="relative w-full group mb-4">
-                        <button onclick="scrollCarousel(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
+                        <button onclick="scrollCarousel(this, -1)" class="hidden md:block absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                         </button>
                         <div class="carousel-container flex overflow-x-auto gap-3 pb-2 snap-x snap-mandatory scroll-smooth no-scrollbar">
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927572/Copy_of_SHORT_7_-_The_Alcohol_Trade-off_krkhvx.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927571/Copy_of_SHORT_9_-_Scarcity_Mindset_ext9gl.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927571/Copy_of_SHORT_6_-_The_Cardio_Fallacy_vs._Lifting_rmfcnv.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927569/Copy_of_SHORT_6_-_The_Friendship_Recession_a2o2e0.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927567/Copy_of_SHORT_5_-_The_School_Run_Secret_xuumj5.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927567/Copy_of_SHORT_4_-_The_Sleep_Loophole_Testosterone_aymaqh.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927566/Copy_of_SHORT_5_-_Decision_Fatigue_hcze15.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927565/Copy_of_SHORT_2_-_The_Protein_First_Loophole_zhggqi.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927564/Copy_of_SHORT_14_-_The_Corporate_Diet_qigmfl.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927563/Copy_of_S10_wqoh4k.mov"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927562/Copy_of_SHORT_13_-_Reactive_Discipline_bqqct5.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927561/Copy_of_SHORT_1_-_The_Guilt_Barrier_eh5rvq.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927559/Copy_of_SHORT_1_ya0xtg.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927559/Copy_of_S11_lyvkme.mov"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927557/Copy_of_S12_alae64.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927572/Copy_of_SHORT_7_-_The_Alcohol_Trade-off_krkhvx.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927571/Copy_of_SHORT_9_-_Scarcity_Mindset_ext9gl.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927571/Copy_of_SHORT_6_-_The_Cardio_Fallacy_vs._Lifting_rmfcnv.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927569/Copy_of_SHORT_6_-_The_Friendship_Recession_a2o2e0.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927567/Copy_of_SHORT_5_-_The_School_Run_Secret_xuumj5.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927567/Copy_of_SHORT_4_-_The_Sleep_Loophole_Testosterone_aymaqh.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927566/Copy_of_SHORT_5_-_Decision_Fatigue_hcze15.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927565/Copy_of_SHORT_2_-_The_Protein_First_Loophole_zhggqi.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927564/Copy_of_SHORT_14_-_The_Corporate_Diet_qigmfl.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927563/Copy_of_S10_wqoh4k.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927562/Copy_of_SHORT_13_-_Reactive_Discipline_bqqct5.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927561/Copy_of_SHORT_1_-_The_Guilt_Barrier_eh5rvq.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927559/Copy_of_SHORT_1_ya0xtg.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927559/Copy_of_S11_lyvkme.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927557/Copy_of_S12_alae64.mov"></video>
                         </div>
-                        <button onclick="scrollCarousel(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
+                        <button onclick="scrollCarousel(this, 1)" class="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                         </button>
                     </div>
@@ -168,40 +139,40 @@
                 </div>
             </div>
 
-            <div class="p-5 bg-alabaster/95 backdrop-blur-sm border-2 border-dust rounded-2xl shadow-sm transition flex flex-col justify-between relative z-10">
+            <div class="p-4 md:p-5 bg-alabaster/95 backdrop-blur-sm border-2 border-dust rounded-2xl shadow-sm transition flex flex-col justify-between relative z-10">
                 <div class="w-full relative">
                     <div class="relative w-full group mb-4">
-                        <button onclick="scrollCarousel(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
+                        <button onclick="scrollCarousel(this, -1)" class="hidden md:block absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                         </button>
                         <div class="carousel-container flex overflow-x-auto gap-3 pb-2 snap-x snap-mandatory scroll-smooth no-scrollbar">
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926106/SmartKidz_B67_A4_jdgr9u.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926106/SmartKidz_B67_A5_aycamr.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926105/SmartKidz_B67_A3_mkbvay.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926105/Solsone_Trial_Video_mmx9wf.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926102/SmartKidz_B67_A2_eiozfh.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926099/SmartKidz_B66_A4_akgtzi.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926099/SmartKidz_B67_A1_f4uoov.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926098/SmartKidz_B66_A5_oyu63p.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926097/SmartKidz_B66_A3_y2sw00.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926097/SmartKidz_B66_A2_mnwuv2.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926093/SmartKidz_B66_A1_i8sdgt.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926090/SmartKidz_4_eyidby.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926090/SmartKidz_5_u3twtr.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926068/SAVARY_29_-_RAIN_flmonp.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926064/SAVARY_2_REVISED_-_RAIN_flboy9.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926058/SAVARY_14_-_MAX_tj4be3.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926055/SAVARY_12_-_RAIN_j7qhfw.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926055/SAVARY_13_-_RAIN_sqtvud.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926054/SAVARY_11_-_RAIN_w8s52i.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926054/QuickSweep_6_hai740.mov"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926051/QuickSweep_5_f7gqh2.mov"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926050/SAVARY_1_with_banner_-_RAIN_fc2vjp.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926049/SAVARY_10_-_RAIN_sfry5o.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926049/QuickSweep_4_bf0e7n.mov"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926047/FAFITNESS_SHORT_1_nyhq7n.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926106/SmartKidz_B67_A4_jdgr9u.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926106/SmartKidz_B67_A5_aycamr.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926105/SmartKidz_B67_A3_mkbvay.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926105/Solsone_Trial_Video_mmx9wf.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926102/SmartKidz_B67_A2_eiozfh.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926099/SmartKidz_B66_A4_akgtzi.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926099/SmartKidz_B67_A1_f4uoov.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926098/SmartKidz_B66_A5_oyu63p.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926097/SmartKidz_B66_A3_y2sw00.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926097/SmartKidz_B66_A2_mnwuv2.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926093/SmartKidz_B66_A1_i8sdgt.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926090/SmartKidz_4_eyidby.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926090/SmartKidz_5_u3twtr.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926068/SAVARY_29_-_RAIN_flmonp.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926064/SAVARY_2_REVISED_-_RAIN_flboy9.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926058/SAVARY_14_-_MAX_tj4be3.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926055/SAVARY_12_-_RAIN_j7qhfw.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926055/SAVARY_13_-_RAIN_sqtvud.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926054/SAVARY_11_-_RAIN_w8s52i.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926054/QuickSweep_6_hai740.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926051/QuickSweep_5_f7gqh2.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926050/SAVARY_1_with_banner_-_RAIN_fc2vjp.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926049/SAVARY_10_-_RAIN_sfry5o.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926049/QuickSweep_4_bf0e7n.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926047/FAFITNESS_SHORT_1_nyhq7n.mp4"></video>
                         </div>
-                        <button onclick="scrollCarousel(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
+                        <button onclick="scrollCarousel(this, 1)" class="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                         </button>
                     </div>
@@ -213,26 +184,26 @@
                 </div>
             </div>
 
-            <div class="p-5 bg-alabaster/95 backdrop-blur-sm border-2 border-dust rounded-2xl shadow-sm transition flex flex-col justify-between relative z-10">
+            <div class="p-4 md:p-5 bg-alabaster/95 backdrop-blur-sm border-2 border-dust rounded-2xl shadow-sm transition flex flex-col justify-between relative z-10">
                 <div class="w-full relative">
                     <div class="relative w-full group mb-4">
-                        <button onclick="scrollCarousel(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
+                        <button onclick="scrollCarousel(this, -1)" class="hidden md:block absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                         </button>
                         <div class="carousel-container flex overflow-x-auto gap-3 pb-2 snap-x snap-mandatory scroll-smooth no-scrollbar">
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927085/Copy_of_MSHATI_AD_2_zvmsc6.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927085/Copy_of_EDIT_VIDEO_3_g1yxpz.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927084/Copy_of_BRENT_AD_4_arldh1.mov"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927084/Copy_of_EDIT_VIDEO_4_paislz.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927084/Copy_of_BRENT_AD_1_kgzxwy.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927083/Copy_of_BRENT_AD_5_gfnyab.mov"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927082/Copy_of_BRENT_AD_2_zdmr9r.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927082/Copy_of_BRENT_AD_2_zdmr9r.mp4"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927081/Copy_of_BRENT_AD_3_s7my1p.mov"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927080/Copy_of_MSHATI_AD_1_vestrw.mov"></video>
-                            <video class="showcase-video w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927079/Copy_of_EDIT_VIDEO_1_hex9oe.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927085/Copy_of_MSHATI_AD_2_zvmsc6.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927085/Copy_of_EDIT_VIDEO_3_g1yxpz.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927084/Copy_of_BRENT_AD_4_arldh1.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927084/Copy_of_EDIT_VIDEO_4_paislz.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927084/Copy_of_BRENT_AD_1_kgzxwy.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927083/Copy_of_BRENT_AD_5_gfnyab.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927082/Copy_of_BRENT_AD_2_zdmr9r.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927082/Copy_of_BRENT_AD_2_zdmr9r.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927081/Copy_of_BRENT_AD_3_s7my1p.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927080/Copy_of_MSHATI_AD_1_vestrw.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927079/Copy_of_EDIT_VIDEO_1_hex9oe.mp4"></video>
                         </div>
-                        <button onclick="scrollCarousel(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
+                        <button onclick="scrollCarousel(this, 1)" class="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                         </button>
                     </div>
@@ -244,40 +215,40 @@
                 </div>
             </div>
 
-            <div class="p-5 bg-alabaster/95 backdrop-blur-sm border-2 border-dust rounded-2xl shadow-sm transition flex flex-col justify-between relative z-10">
+            <div class="p-4 md:p-5 bg-alabaster/95 backdrop-blur-sm border-2 border-dust rounded-2xl shadow-sm transition flex flex-col justify-between relative z-10">
                 <div class="w-full relative">
                     <div class="relative w-full group mb-4">
-                        <button onclick="scrollCarousel(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
+                        <button onclick="scrollCarousel(this, -1)" class="hidden md:block absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                         </button>
                         <div class="carousel-container flex overflow-x-auto gap-3 pb-2 snap-x snap-mandatory scroll-smooth no-scrollbar">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926011/G-9_oeye4q.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926010/G-8_wybtzb.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926010/G-6_ktphrp.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926010/G-7_yqo1qo.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926010/G-28_q18fhu.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926009/G-27_rpwoln.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926008/G-24_mrni9g.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926008/G-25_rnf6ix.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926008/G-26_asjpuu.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926008/G-23_o9xwqf.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926007/G-20_ogev0t.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926007/G-22_pbfj5r.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926007/G-21_w6ofnx.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926006/G-17_jcbzjx.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926006/G-19_goescg.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926006/G-18_upxtzt.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926006/G-2_knubuo.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926005/G-15_qlfoia.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926005/G-16_eyjrkh.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926004/G-13_eyaub7.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926004/G-10_cnivfe.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926004/G-14_r6j6vy.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926004/G-11_egzseu.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926004/G-1_xqhlry.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
-                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926003/G-12_donjod.png" class="w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926011/G-9_oeye4q.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926010/G-8_wybtzb.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926010/G-6_ktphrp.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926010/G-7_yqo1qo.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926010/G-28_q18fhu.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926009/G-27_rpwoln.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926008/G-24_mrni9g.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926008/G-25_rnf6ix.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926008/G-26_asjpuu.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926008/G-23_o9xwqf.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926007/G-20_ogev0t.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926007/G-22_pbfj5r.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926007/G-21_w6ofnx.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926006/G-17_jcbzjx.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926006/G-19_goescg.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926006/G-18_upxtzt.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926006/G-2_knubuo.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926005/G-15_qlfoia.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926005/G-16_eyjrkh.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926004/G-13_eyaub7.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926004/G-10_cnivfe.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926004/G-14_r6j6vy.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926004/G-11_egzseu.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926004/G-1_xqhlry.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
+                            <img src="https://res.cloudinary.com/dadwp0x4h/image/upload/q_auto/f_auto/v1780926003/G-12_donjod.png" class="w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] transition-transform md:hover:scale-[1.02]" alt="Graphic Design Showcase" loading="lazy">
                         </div>
-                        <button onclick="scrollCarousel(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
+                        <button onclick="scrollCarousel(this, 1)" class="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                         </button>
                     </div>
@@ -292,14 +263,14 @@
         </div>
     </section>
 
-    <section id="capabilities" class="border-t border-dust bg-dust/30 py-20 relative z-10">
+    <section id="capabilities" class="border-t border-dust bg-dust/30 py-16 md:py-20 relative z-10">
         <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
+            <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
                 <h2 class="text-3xl font-bold mb-4 text-gunmetal">The Next-Gen Workflow</h2>
                 <p class="text-granite">Standard editing isn't enough anymore. Here is how I blend traditional storytelling mechanics with cutting-edge AI capabilities.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8">
                 <div class="p-6 bg-alabaster/95 backdrop-blur-sm border border-dust rounded-xl shadow-sm">
                     <div class="w-10 h-10 rounded-lg bg-ash/40 border border-ash text-granite flex items-center justify-center mb-4 font-bold">01</div>
                     <h3 class="font-bold text-xl mb-2 text-gunmetal">AI Motion & B-Roll</h3>
@@ -319,14 +290,22 @@
         </div>
     </section>
 
-    <section id="contact" class="max-w-4xl mx-auto px-6 py-24 text-center relative z-10">
-        <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-gunmetal">Let's Build Something Viral</h2>
-        <p class="text-granite max-w-xl mx-auto mb-10">
-            Looking to scale your creative volume or implement an AI-driven editing strategy? Let's strategize a pipeline tailored to your brand.
-        </p>
-        <a href="mailto:your.email@example.com" class="inline-block px-8 py-4 bg-granite text-alabaster rounded-lg font-bold hover:bg-gunmetal transition shadow-lg">
-            Get Direct Project Proposal
-        </a>
+    <section id="contact" class="max-w-4xl mx-auto px-6 py-16 md:py-24 bg-alabaster/90 md:rounded-t-3xl text-center relative z-10 shadow-lg md:shadow-none">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-8 md:mb-12 text-gunmetal">Let's Connect</h2>
+        <div class="grid md:grid-cols-2 gap-6 md:gap-8 text-left max-w-2xl mx-auto text-granite font-medium">
+            <p><strong>E-mail:</strong> <br class="sm:hidden"><a href="mailto:pazrainiel26@gmail.com" class="hover:text-gunmetal underline break-all">pazrainiel26@gmail.com</a></p>
+            <p><strong>WhatsApp:</strong> <br class="sm:hidden"><a href="https://wa.me/639164190167" class="hover:text-gunmetal underline">+63 916 419 0167</a></p>
+            <p><strong>Facebook:</strong> <br class="sm:hidden"><a href="https://facebook.com/eliazrainiel.paz/" class="hover:text-gunmetal underline break-all">facebook.com/eliazrainiel.paz/</a></p>
+            <p><strong>Instagram:</strong> <br class="sm:hidden"><a href="https://instagram.com/_rainfps" class="hover:text-gunmetal underline">@_rainfps</a></p>
+            <p class="md:col-span-2 text-center mt-4 p-4 border-2 border-dust rounded-xl bg-alabaster">
+                <strong>OnlineJobs.ph:</strong> <br class="sm:hidden"><span class="text-gunmetal font-bold">ELIAZ RAINIEL G. PAZ</span>
+            </p>
+        </div>
+        <div class="mt-12">
+            <a href="mailto:pazrainiel26@gmail.com" class="inline-block px-8 py-4 bg-granite text-alabaster rounded-lg font-bold hover:bg-gunmetal transition shadow-lg w-full sm:w-auto">
+                Get Direct Project Proposal
+            </a>
+        </div>
     </section>
 
     <footer class="border-t border-dust py-8 text-center text-sm font-medium text-granite relative z-10 bg-alabaster/90">
@@ -334,40 +313,29 @@
     </footer>
 
     <script>
-        // Carousel Arrow Navigation
+        // Smooth Carousel Navigation
         function scrollCarousel(button, direction) {
             const container = button.parentElement.querySelector('.carousel-container');
             const scrollAmount = container.clientWidth * 0.55; 
             container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
         }
 
-        // Smart Video Hover & Audio Logic
+        // Play/Pause Video Logic (Hover on desktop, Tap on mobile handles native controls)
         document.addEventListener('DOMContentLoaded', () => {
-            const videos = document.querySelectorAll('.showcase-video');
-            
-            videos.forEach(video => {
-                video.addEventListener('mouseenter', () => {
-                    // Attempt to play with sound unmuted
-                    video.muted = false;
-                    const playPromise = video.play();
-                    
-                    if (playPromise !== undefined) {
-                        playPromise.catch(error => {
-                            // If browser blocks unmuted audio, fallback to muted playback
-                            video.muted = true;
-                            video.play();
-                        });
-                    }
+            document.querySelectorAll('.showcase-video').forEach(video => {
+                video.addEventListener('mouseenter', () => { 
+                    video.muted = false; 
+                    video.play().catch(() => { 
+                        video.muted = true; 
+                        video.play(); 
+                    }); 
                 });
-
-                video.addEventListener('mouseleave', () => {
-                    // Stop playing and ensure it mutes again when mouse leaves
-                    video.pause();
+                video.addEventListener('mouseleave', () => { 
+                    video.pause(); 
                     video.muted = true; 
                 });
             });
         });
     </script>
-
 </body>
 </html>
