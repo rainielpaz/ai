@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editor Lead | AI Video Strategy</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Custom Theme Configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -22,6 +24,7 @@
         }
     </script>
     
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     
     <style>
@@ -49,6 +52,7 @@
 </head>
 <body class="antialiased selection:bg-ash selection:text-gunmetal">
 
+    <!-- Floating Background -->
     <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
         <img src="https://api.iconify.design/simple-icons/adobepremierepro.svg?color=%239FB8AD" class="floating-logo w-14 h-14 hidden md:block" style="left: 5%; animation-duration: 40s; animation-delay: -5s;">
         <img src="https://api.iconify.design/simple-icons/capcut.svg?color=%239FB8AD" class="floating-logo w-16 md:w-20 h-16 md:h-20" style="left: 20%; animation-duration: 48s; animation-delay: -15s;">
@@ -64,17 +68,19 @@
         <img src="https://api.iconify.design/simple-icons/facebook.svg?color=%239FB8AD" class="floating-logo w-14 h-14" style="left: 10%; animation-duration: 44s; animation-delay: -48s;">
     </div>
 
+    <!-- Header / Navigation -->
     <header class="border-b border-dust backdrop-blur-md sticky top-0 z-50 bg-alabaster/90">
         <div class="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
             <span class="font-bold text-lg md:text-xl tracking-tight text-granite">CAPT<span class="text-gunmetal">IVATE</span></span>
             <nav class="flex items-center gap-3 md:space-x-6 text-xs md:text-sm font-semibold text-gunmetal/80">
                 <a href="#work" class="hover:text-granite transition hidden sm:inline-block">Work</a>
                 <a href="#contact" class="hover:text-granite transition hidden sm:inline-block">Contact</a>
-                <a href="#contact" class="px-4 py-2 bg-granite hover:bg-gunmetal text-alabaster rounded-full transition shadow-sm">Let's Work</a>
+                <button onclick="toggleModal()" class="px-4 py-2 bg-granite hover:bg-gunmetal text-alabaster rounded-full transition shadow-sm">Let's Work</button>
             </nav>
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="max-w-4xl mx-auto px-6 pt-16 md:pt-24 pb-12 md:pb-16 text-center">
         <div class="inline-flex items-center gap-2 px-3 py-1 bg-dust/50 border border-dust rounded-full text-xs font-semibold text-granite mb-6">
             <span class="w-2 h-2 rounded-full bg-ash animate-pulse"></span>
@@ -90,12 +96,13 @@
             <a href="#work" class="px-6 py-3 w-full sm:w-auto bg-granite text-alabaster hover:bg-gunmetal font-bold rounded-lg transition shadow-lg">
                 View Showcase
             </a>
-            <a href="#contact" class="px-6 py-3 w-full sm:w-auto bg-transparent border-2 border-granite text-granite hover:bg-granite hover:text-alabaster font-bold rounded-lg transition">
+            <button onclick="toggleModal()" class="px-6 py-3 w-full sm:w-auto bg-transparent border-2 border-granite text-granite hover:bg-granite hover:text-alabaster font-bold rounded-lg transition">
                 Get in Touch
-            </a>
+            </button>
         </div>
     </section>
 
+    <!-- Video Showcase Grid Section -->
     <section id="work" class="max-w-6xl mx-auto px-4 md:px-6 py-12 md:py-16">
         <div class="text-center md:text-left mb-10 md:mb-12">
             <h2 class="text-3xl font-extrabold tracking-tight text-gunmetal mb-2">Featured Showcase</h2>
@@ -104,6 +111,7 @@
         
         <div class="grid md:grid-cols-2 gap-8">
             
+            <!-- Panel 1: AI FITNESS COACH -->
             <div class="p-4 md:p-5 bg-alabaster/95 backdrop-blur-sm border-2 border-dust rounded-2xl shadow-sm transition flex flex-col justify-between relative z-10">
                 <div class="w-full relative">
                     <div class="relative w-full group mb-4">
@@ -111,21 +119,21 @@
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                         </button>
                         <div class="carousel-container flex overflow-x-auto gap-3 pb-2 snap-x snap-mandatory scroll-smooth no-scrollbar">
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927572/Copy_of_SHORT_7_-_The_Alcohol_Trade-off_krkhvx.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927571/Copy_of_SHORT_9_-_Scarcity_Mindset_ext9gl.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927571/Copy_of_SHORT_6_-_The_Cardio_Fallacy_vs._Lifting_rmfcnv.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927569/Copy_of_SHORT_6_-_The_Friendship_Recession_a2o2e0.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927567/Copy_of_SHORT_5_-_The_School_Run_Secret_xuumj5.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927567/Copy_of_SHORT_4_-_The_Sleep_Loophole_Testosterone_aymaqh.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927566/Copy_of_SHORT_5_-_Decision_Fatigue_hcze15.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927565/Copy_of_SHORT_2_-_The_Protein_First_Loophole_zhggqi.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927564/Copy_of_SHORT_14_-_The_Corporate_Diet_qigmfl.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927563/Copy_of_S10_wqoh4k.mov"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927562/Copy_of_SHORT_13_-_Reactive_Discipline_bqqct5.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927561/Copy_of_SHORT_1_-_The_Guilt_Barrier_eh5rvq.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927559/Copy_of_SHORT_1_ya0xtg.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927559/Copy_of_S11_lyvkme.mov"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927557/Copy_of_S12_alae64.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927572/Copy_of_SHORT_7_-_The_Alcohol_Trade-off_krkhvx.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927572/Copy_of_SHORT_7_-_The_Alcohol_Trade-off_krkhvx.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927571/Copy_of_SHORT_9_-_Scarcity_Mindset_ext9gl.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927571/Copy_of_SHORT_9_-_Scarcity_Mindset_ext9gl.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927571/Copy_of_SHORT_6_-_The_Cardio_Fallacy_vs._Lifting_rmfcnv.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927571/Copy_of_SHORT_6_-_The_Cardio_Fallacy_vs._Lifting_rmfcnv.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927569/Copy_of_SHORT_6_-_The_Friendship_Recession_a2o2e0.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927569/Copy_of_SHORT_6_-_The_Friendship_Recession_a2o2e0.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927567/Copy_of_SHORT_5_-_The_School_Run_Secret_xuumj5.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927567/Copy_of_SHORT_5_-_The_School_Run_Secret_xuumj5.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927567/Copy_of_SHORT_4_-_The_Sleep_Loophole_Testosterone_aymaqh.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927567/Copy_of_SHORT_4_-_The_Sleep_Loophole_Testosterone_aymaqh.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927566/Copy_of_SHORT_5_-_Decision_Fatigue_hcze15.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927566/Copy_of_SHORT_5_-_Decision_Fatigue_hcze15.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927565/Copy_of_SHORT_2_-_The_Protein_First_Loophole_zhggqi.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927565/Copy_of_SHORT_2_-_The_Protein_First_Loophole_zhggqi.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927564/Copy_of_SHORT_14_-_The_Corporate_Diet_qigmfl.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927564/Copy_of_SHORT_14_-_The_Corporate_Diet_qigmfl.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927563/Copy_of_S10_wqoh4k.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927563/Copy_of_S10_wqoh4k.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927562/Copy_of_SHORT_13_-_Reactive_Discipline_bqqct5.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927562/Copy_of_SHORT_13_-_Reactive_Discipline_bqqct5.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927561/Copy_of_SHORT_1_-_The_Guilt_Barrier_eh5rvq.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927561/Copy_of_SHORT_1_-_The_Guilt_Barrier_eh5rvq.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927559/Copy_of_SHORT_1_ya0xtg.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927559/Copy_of_SHORT_1_ya0xtg.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927559/Copy_of_S11_lyvkme.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927559/Copy_of_S11_lyvkme.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927557/Copy_of_S12_alae64.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927557/Copy_of_S12_alae64.mov"></video>
                         </div>
                         <button onclick="scrollCarousel(this, 1)" class="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
@@ -139,6 +147,7 @@
                 </div>
             </div>
 
+            <!-- Panel 2: SHORT-FORM AI -->
             <div class="p-4 md:p-5 bg-alabaster/95 backdrop-blur-sm border-2 border-dust rounded-2xl shadow-sm transition flex flex-col justify-between relative z-10">
                 <div class="w-full relative">
                     <div class="relative w-full group mb-4">
@@ -146,31 +155,31 @@
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                         </button>
                         <div class="carousel-container flex overflow-x-auto gap-3 pb-2 snap-x snap-mandatory scroll-smooth no-scrollbar">
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926106/SmartKidz_B67_A4_jdgr9u.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926106/SmartKidz_B67_A5_aycamr.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926105/SmartKidz_B67_A3_mkbvay.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926105/Solsone_Trial_Video_mmx9wf.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926102/SmartKidz_B67_A2_eiozfh.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926099/SmartKidz_B66_A4_akgtzi.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926099/SmartKidz_B67_A1_f4uoov.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926098/SmartKidz_B66_A5_oyu63p.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926097/SmartKidz_B66_A3_y2sw00.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926097/SmartKidz_B66_A2_mnwuv2.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926093/SmartKidz_B66_A1_i8sdgt.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926090/SmartKidz_4_eyidby.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926090/SmartKidz_5_u3twtr.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926068/SAVARY_29_-_RAIN_flmonp.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926064/SAVARY_2_REVISED_-_RAIN_flboy9.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926058/SAVARY_14_-_MAX_tj4be3.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926055/SAVARY_12_-_RAIN_j7qhfw.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926055/SAVARY_13_-_RAIN_sqtvud.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926054/SAVARY_11_-_RAIN_w8s52i.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926054/QuickSweep_6_hai740.mov"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926051/QuickSweep_5_f7gqh2.mov"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926050/SAVARY_1_with_banner_-_RAIN_fc2vjp.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926049/SAVARY_10_-_RAIN_sfry5o.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926049/QuickSweep_4_bf0e7n.mov"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926047/FAFITNESS_SHORT_1_nyhq7n.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926106/SmartKidz_B67_A4_jdgr9u.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926106/SmartKidz_B67_A4_jdgr9u.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926106/SmartKidz_B67_A5_aycamr.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926106/SmartKidz_B67_A5_aycamr.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926105/SmartKidz_B67_A3_mkbvay.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926105/SmartKidz_B67_A3_mkbvay.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926105/Solsone_Trial_Video_mmx9wf.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926105/Solsone_Trial_Video_mmx9wf.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926102/SmartKidz_B67_A2_eiozfh.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926102/SmartKidz_B67_A2_eiozfh.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926099/SmartKidz_B66_A4_akgtzi.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926099/SmartKidz_B66_A4_akgtzi.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926099/SmartKidz_B67_A1_f4uoov.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926099/SmartKidz_B67_A1_f4uoov.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926098/SmartKidz_B66_A5_oyu63p.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926098/SmartKidz_B66_A5_oyu63p.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926097/SmartKidz_B66_A3_y2sw00.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926097/SmartKidz_B66_A3_y2sw00.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926097/SmartKidz_B66_A2_mnwuv2.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926097/SmartKidz_B66_A2_mnwuv2.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926093/SmartKidz_B66_A1_i8sdgt.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926093/SmartKidz_B66_A1_i8sdgt.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926090/SmartKidz_4_eyidby.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926090/SmartKidz_4_eyidby.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926090/SmartKidz_5_u3twtr.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926090/SmartKidz_5_u3twtr.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926068/SAVARY_29_-_RAIN_flmonp.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926068/SAVARY_29_-_RAIN_flmonp.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926064/SAVARY_2_REVISED_-_RAIN_flboy9.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926064/SAVARY_2_REVISED_-_RAIN_flboy9.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926058/SAVARY_14_-_MAX_tj4be3.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926058/SAVARY_14_-_MAX_tj4be3.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926055/SAVARY_12_-_RAIN_j7qhfw.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926055/SAVARY_12_-_RAIN_j7qhfw.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926055/SAVARY_13_-_RAIN_sqtvud.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926055/SAVARY_13_-_RAIN_sqtvud.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926054/SAVARY_11_-_RAIN_w8s52i.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926054/SAVARY_11_-_RAIN_w8s52i.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926054/QuickSweep_6_hai740.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926054/QuickSweep_6_hai740.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926051/QuickSweep_5_f7gqh2.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926051/QuickSweep_5_f7gqh2.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926050/SAVARY_1_with_banner_-_RAIN_fc2vjp.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926050/SAVARY_1_with_banner_-_RAIN_fc2vjp.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926049/SAVARY_10_-_RAIN_sfry5o.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926049/SAVARY_10_-_RAIN_sfry5o.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926049/QuickSweep_4_bf0e7n.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926049/QuickSweep_4_bf0e7n.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926047/FAFITNESS_SHORT_1_nyhq7n.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780926047/FAFITNESS_SHORT_1_nyhq7n.mp4"></video>
                         </div>
                         <button onclick="scrollCarousel(this, 1)" class="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
@@ -184,6 +193,7 @@
                 </div>
             </div>
 
+            <!-- Panel 3: TALKING HEADS -->
             <div class="p-4 md:p-5 bg-alabaster/95 backdrop-blur-sm border-2 border-dust rounded-2xl shadow-sm transition flex flex-col justify-between relative z-10">
                 <div class="w-full relative">
                     <div class="relative w-full group mb-4">
@@ -191,20 +201,20 @@
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                         </button>
                         <div class="carousel-container flex overflow-x-auto gap-3 pb-2 snap-x snap-mandatory scroll-smooth no-scrollbar">
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927085/Copy_of_MSHATI_AD_2_zvmsc6.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927085/Copy_of_EDIT_VIDEO_3_g1yxpz.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927084/Copy_of_BRENT_AD_4_arldh1.mov"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927084/Copy_of_EDIT_VIDEO_4_paislz.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927084/Copy_of_BRENT_AD_1_kgzxwy.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927083/Copy_of_BRENT_AD_5_gfnyab.mov"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927082/Copy_of_BRENT_AD_2_zdmr9r.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927082/Copy_of_BRENT_AD_2_zdmr9r.mp4"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927081/Copy_of_BRENT_AD_3_s7my1p.mov"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927080/Copy_of_MSHATI_AD_1_vestrw.mov"></video>
-                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927079/Copy_of_EDIT_VIDEO_1_hex9oe.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927085/Copy_of_MSHATI_AD_2_zvmsc6.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927085/Copy_of_MSHATI_AD_2_zvmsc6.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927085/Copy_of_EDIT_VIDEO_3_g1yxpz.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927085/Copy_of_EDIT_VIDEO_3_g1yxpz.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927084/Copy_of_BRENT_AD_4_arldh1.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927084/Copy_of_BRENT_AD_4_arldh1.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927084/Copy_of_EDIT_VIDEO_4_paislz.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927084/Copy_of_EDIT_VIDEO_4_paislz.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927084/Copy_of_BRENT_AD_1_kgzxwy.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927084/Copy_of_BRENT_AD_1_kgzxwy.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927083/Copy_of_BRENT_AD_5_gfnyab.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927083/Copy_of_BRENT_AD_5_gfnyab.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927082/Copy_of_BRENT_AD_2_zdmr9r.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927082/Copy_of_BRENT_AD_2_zdmr9r.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927082/Copy_of_BRENT_AD_2_zdmr9r.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927082/Copy_of_BRENT_AD_2_zdmr9r.mp4"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927081/Copy_of_BRENT_AD_3_s7my1p.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927081/Copy_of_BRENT_AD_3_s7my1p.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927080/Copy_of_MSHATI_AD_1_vestrw.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927080/Copy_of_MSHATI_AD_1_vestrw.mov"></video>
+                            <video class="showcase-video w-[85%] md:w-[50%] shrink-0 snap-center rounded-xl border border-dust bg-dust shadow-sm object-cover aspect-[9/16] cursor-pointer transition-transform md:hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927079/Copy_of_EDIT_VIDEO_1_hex9oe.jpg"><source src="https://res.cloudinary.com/dadwp0x4h/video/upload/q_auto/f_auto/v1780927079/Copy_of_EDIT_VIDEO_1_hex9oe.mp4"></video>
                         </div>
                         <button onclick="scrollCarousel(this, 1)" class="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-alabaster text-gunmetal border border-dust p-2 rounded-full shadow-md hover:bg-granite hover:text-alabaster transition opacity-90 hover:opacity-100">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                         </button>
                     </div>
 
@@ -215,6 +225,7 @@
                 </div>
             </div>
 
+            <!-- Panel 4: GRAPHIC DESIGN -->
             <div class="p-4 md:p-5 bg-alabaster/95 backdrop-blur-sm border-2 border-dust rounded-2xl shadow-sm transition flex flex-col justify-between relative z-10">
                 <div class="w-full relative">
                     <div class="relative w-full group mb-4">
@@ -263,6 +274,7 @@
         </div>
     </section>
 
+    <!-- AI & Production Capabilities -->
     <section id="capabilities" class="border-t border-dust bg-dust/30 py-16 md:py-20 relative z-10">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
@@ -290,28 +302,140 @@
         </div>
     </section>
 
-    <section id="contact" class="max-w-4xl mx-auto px-6 py-16 md:py-24 bg-alabaster/90 md:rounded-t-3xl text-center relative z-10 shadow-lg md:shadow-none">
-        <h2 class="text-3xl md:text-5xl font-extrabold mb-8 md:mb-12 text-gunmetal">Let's Connect</h2>
-        <div class="grid md:grid-cols-2 gap-6 md:gap-8 text-left max-w-2xl mx-auto text-granite font-medium">
-            <p><strong>E-mail:</strong> <br class="sm:hidden"><a href="mailto:pazrainiel26@gmail.com" class="hover:text-gunmetal underline break-all">pazrainiel26@gmail.com</a></p>
-            <p><strong>WhatsApp:</strong> <br class="sm:hidden"><a href="https://wa.me/639164190167" class="hover:text-gunmetal underline">+63 916 419 0167</a></p>
-            <p><strong>Facebook:</strong> <br class="sm:hidden"><a href="https://facebook.com/eliazrainiel.paz/" class="hover:text-gunmetal underline break-all">facebook.com/eliazrainiel.paz/</a></p>
-            <p><strong>Instagram:</strong> <br class="sm:hidden"><a href="https://instagram.com/_rainfps" class="hover:text-gunmetal underline">@_rainfps</a></p>
-            <p class="md:col-span-2 text-center mt-4 p-4 border-2 border-dust rounded-xl bg-alabaster">
-                <strong>OnlineJobs.ph:</strong> <br class="sm:hidden"><span class="text-gunmetal font-bold">ELIAZ RAINIEL G. PAZ</span>
-            </p>
-        </div>
-        <div class="mt-12">
-            <a href="mailto:pazrainiel26@gmail.com" class="inline-block px-8 py-4 bg-granite text-alabaster rounded-lg font-bold hover:bg-gunmetal transition shadow-lg w-full sm:w-auto">
-                Get Direct Project Proposal
+    <!-- Detailed Contact Info Section -->
+    <section id="contact" class="max-w-5xl mx-auto px-6 py-16 md:py-24 relative z-10 text-center">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-4 text-gunmetal">Let's Connect</h2>
+        <p class="text-granite max-w-xl mx-auto mb-10">Ready to scale your content? Reach out directly through any of these platforms.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto text-left">
+            <!-- Email -->
+            <a href="mailto:pazrainiel26@gmail.com" class="group block p-6 bg-alabaster/95 backdrop-blur-sm border-2 border-dust rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-ash transition-all duration-300">
+                <div class="w-10 h-10 rounded-full bg-dust/50 flex items-center justify-center mb-4 text-granite group-hover:bg-ash group-hover:text-alabaster transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="font-bold text-lg text-gunmetal mb-1">E-mail</h3>
+                <p class="text-granite text-sm truncate">pazrainiel26@gmail.com</p>
             </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/639164190167" target="_blank" class="group block p-6 bg-alabaster/95 backdrop-blur-sm border-2 border-dust rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-ash transition-all duration-300">
+                <div class="w-10 h-10 rounded-full bg-dust/50 flex items-center justify-center mb-4 text-granite group-hover:bg-ash group-hover:text-alabaster transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                </div>
+                <h3 class="font-bold text-lg text-gunmetal mb-1">WhatsApp</h3>
+                <p class="text-granite text-sm truncate">+63 916 419 0167</p>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://facebook.com/eliazrainiel.paz/" target="_blank" class="group block p-6 bg-alabaster/95 backdrop-blur-sm border-2 border-dust rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-ash transition-all duration-300">
+                <div class="w-10 h-10 rounded-full bg-dust/50 flex items-center justify-center mb-4 text-granite group-hover:bg-ash group-hover:text-alabaster transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
+                </div>
+                <h3 class="font-bold text-lg text-gunmetal mb-1">Facebook</h3>
+                <p class="text-granite text-sm truncate">eliazrainiel.paz</p>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/_rainfps" target="_blank" class="group block p-6 bg-alabaster/95 backdrop-blur-sm border-2 border-dust rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-ash transition-all duration-300 lg:col-start-1 lg:col-span-1 md:col-start-2">
+                <div class="w-10 h-10 rounded-full bg-dust/50 flex items-center justify-center mb-4 text-granite group-hover:bg-ash group-hover:text-alabaster transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke-width="2"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2"></line>
+                    </svg>
+                </div>
+                <h3 class="font-bold text-lg text-gunmetal mb-1">Instagram</h3>
+                <p class="text-granite text-sm truncate">@_rainfps</p>
+            </a>
+
+            <!-- OnlineJobs.ph -->
+            <div class="group block p-6 bg-alabaster/95 backdrop-blur-sm border-2 border-dust rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-ash transition-all duration-300 lg:col-span-2 md:col-span-2">
+                <div class="w-10 h-10 rounded-full bg-dust/50 flex items-center justify-center mb-4 text-granite group-hover:bg-ash group-hover:text-alabaster transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="font-bold text-lg text-gunmetal mb-1">OnlineJobs.ph</h3>
+                <p class="text-granite text-sm truncate font-bold">ELIAZ RAINIEL G. PAZ</p>
+            </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="border-t border-dust py-8 text-center text-sm font-medium text-granite relative z-10 bg-alabaster/90">
         &copy; 2026 CAPTIVATE. Built for high-performance creative.
     </footer>
 
+    <!-- Job Proposal Modal -->
+    <div id="proposalModal" class="fixed inset-0 z-[100] hidden">
+        <!-- Overlay -->
+        <div id="modalOverlay" class="absolute inset-0 bg-gunmetal/40 backdrop-blur-sm opacity-0 transition-opacity duration-300" onclick="toggleModal()"></div>
+        
+        <!-- Modal Content -->
+        <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:p-0">
+            <div id="modalContent" class="relative bg-alabaster rounded-3xl text-left overflow-hidden shadow-2xl transform scale-95 opacity-0 transition-all duration-300 sm:my-8 sm:max-w-lg w-full p-8 border border-dust">
+                
+                <!-- Close Button -->
+                <button onclick="toggleModal()" class="absolute top-5 right-5 text-granite hover:text-gunmetal transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+
+                <h2 class="text-2xl font-extrabold text-gunmetal mb-6">Let's build something.</h2>
+
+                <!-- FormSubmit Integration -->
+                <form id="proposalForm" action="https://formsubmit.co/pazrainiel26@gmail.com" method="POST" class="space-y-6 mt-2">
+                    
+                    <!-- Hidden Config for FormSubmit -->
+                    <input type="hidden" name="_subject" value="New Project Proposal from CAPTIVATE">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-extrabold text-granite tracking-wider mb-2 uppercase">First Name</label>
+                            <input type="text" name="First_Name" placeholder="Juan" required class="w-full bg-dust/30 border border-dust rounded-xl px-4 py-3 text-gunmetal placeholder-gunmetal/50 focus:outline-none focus:border-granite focus:ring-1 focus:ring-granite transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-extrabold text-granite tracking-wider mb-2 uppercase">Last Name</label>
+                            <input type="text" name="Last_Name" placeholder="dela Cruz" required class="w-full bg-dust/30 border border-dust rounded-xl px-4 py-3 text-gunmetal placeholder-gunmetal/50 focus:outline-none focus:border-granite focus:ring-1 focus:ring-granite transition-all">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-extrabold text-granite tracking-wider mb-2 uppercase">Email Address</label>
+                        <input type="email" name="email" placeholder="you@email.com" required class="w-full bg-dust/30 border border-dust rounded-xl px-4 py-3 text-gunmetal placeholder-gunmetal/50 focus:outline-none focus:border-granite focus:ring-1 focus:ring-granite transition-all">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-extrabold text-granite tracking-wider mb-2 uppercase">Project Type</label>
+                        <div class="relative">
+                            <select name="Project_Type" required class="w-full bg-dust/30 border border-dust rounded-xl px-4 py-3 text-gunmetal appearance-none focus:outline-none focus:border-granite focus:ring-1 focus:ring-granite transition-all cursor-pointer">
+                                <option value="" disabled selected hidden>Select a service...</option>
+                                <option value="Short-Form AI Content">Short-Form AI Content</option>
+                                <option value="Talking Heads / VSL">Talking Heads / VSL</option>
+                                <option value="Graphic Design / Thumbnails">Graphic Design / Thumbnails</option>
+                                <option value="Custom Pipeline Setup">Custom Pipeline Setup</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-granite">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-extrabold text-granite tracking-wider mb-2 uppercase">Tell me about your project</label>
+                        <textarea rows="4" name="Message" placeholder="Describe what you need, timeline, budget, or anything that helps..." required class="w-full bg-dust/30 border border-dust rounded-xl px-4 py-3 text-gunmetal placeholder-gunmetal/50 focus:outline-none focus:border-granite focus:ring-1 focus:ring-granite transition-all resize-none"></textarea>
+                    </div>
+
+                    <div class="pt-2">
+                        <button type="submit" id="submitBtn" class="inline-flex items-center gap-2 px-8 py-3.5 bg-granite text-alabaster font-bold rounded-full hover:bg-gunmetal hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed">
+                            Send Proposal 
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path></svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script>
         // Smooth Carousel Navigation
         function scrollCarousel(button, direction) {
@@ -320,7 +444,69 @@
             container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
         }
 
-        // Play/Pause Video Logic (Hover on desktop, Tap on mobile handles native controls)
+        // Modal Logic
+        function toggleModal() {
+            const modal = document.getElementById('proposalModal');
+            const overlay = document.getElementById('modalOverlay');
+            const content = document.getElementById('modalContent');
+            
+            if (modal.classList.contains('hidden')) {
+                // Open modal
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    overlay.classList.remove('opacity-0');
+                    content.classList.remove('opacity-0', 'scale-95');
+                    content.classList.add('opacity-100', 'scale-100');
+                }, 10);
+            } else {
+                // Close modal
+                overlay.classList.add('opacity-0');
+                content.classList.remove('opacity-100', 'scale-100');
+                content.classList.add('opacity-0', 'scale-95');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        // Form Submission Logic (AJAX)
+        const proposalForm = document.getElementById('proposalForm');
+        proposalForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent page redirect
+            
+            const btn = document.getElementById('submitBtn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Sending...';
+            btn.disabled = true;
+
+            fetch('https://formsubmit.co/ajax/pazrainiel26@gmail.com', {
+                method: 'POST',
+                body: new FormData(this)
+            })
+            .then(response => response.json())
+            .then(data => {
+                btn.innerHTML = 'Proposal Sent! ✓';
+                btn.classList.replace('bg-granite', 'bg-ash');
+                btn.classList.replace('text-alabaster', 'text-gunmetal');
+                
+                setTimeout(() => {
+                    toggleModal(); // Close modal
+                    proposalForm.reset(); // Clear form
+                    // Reset button state
+                    btn.innerHTML = originalText;
+                    btn.classList.replace('bg-ash', 'bg-granite');
+                    btn.classList.replace('text-gunmetal', 'text-alabaster');
+                    btn.disabled = false;
+                }, 2500);
+            })
+            .catch(error => {
+                btn.innerHTML = 'Error. Please try again.';
+                btn.disabled = false;
+                setTimeout(() => btn.innerHTML = originalText, 3000);
+            });
+        });
+
+        // Play/Pause Video Logic
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.showcase-video').forEach(video => {
                 video.addEventListener('mouseenter', () => { 
@@ -333,6 +519,17 @@
                 video.addEventListener('mouseleave', () => { 
                     video.pause(); 
                     video.muted = true; 
+                });
+                video.addEventListener('click', () => {
+                    if (video.paused) {
+                        video.muted = false;
+                        video.play().catch(() => {
+                            video.muted = true;
+                            video.play();
+                        });
+                    } else {
+                        video.pause();
+                    }
                 });
             });
         });
